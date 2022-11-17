@@ -15,7 +15,7 @@
 <h2 align="center"> Desktop </h2>
 
 <p align="center">
-  <img src="https://i.imgur.com/md2uBCB.png">
+  <img src="https://i.imgur.com/AEghllW.png">
 </p>
 
 <h2 align="center"> Mobile </h2>
