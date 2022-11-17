@@ -1,0 +1,201 @@
+/* ------------------------------------VAR CONFIG-------------------------------------- */
+:root {
+    --Blue: #5163D3;
+    --LigthBlue: #D7E4FB;
+    --Grey: #EEEEEE;
+    --Black: #000;
+    --BlackLight: rgba(0, 0, 0, 0.644);
+    --White: #fff;
+}
+
+/* -----------------------------------HEADER------------------------------------------ */
+header {
+    background-color: var(--Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    padding: 1em;
+}
+
+/* -----------------------------------MAIN---------------------------------------- */
+.main__news {
+    margin: 2rem 0;
+}
+
+.main__news--container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    margin: auto;
+    padding: 1.5rem;
+    gap: 1rem;
+    box-shadow: 2px 3px 5px 2px var(--LigthBlue);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.main__news--container:hover {
+    transform: scale(1.02);
+}
+
+.main__news--text {
+    color: var(--Blue);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main__news--text :nth-child(1) {
+    background-color: var(--LigthBlue);
+    max-width: 5rem;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: 500;
+    border-radius: 0.2rem;
+}
+
+.main__news--text h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.main__news--text :nth-child(3) {
+    color: var(--Black);
+    margin-top: 2rem;
+}
+
+.main__news--text span {
+    color: var(--BlackLight);
+    font-size: 0.9rem;
+}
+
+.main__news--img img {
+    max-width: 800px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2rem 0 2rem 0;
+}
+
+.others__news--container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin: 4rem auto;
+    gap: 3rem;
+}
+
+.others__news--card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    height: 250px;
+    gap: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 2px 3px 5px 2px var(--LigthBlue);
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 1.5rem 0 1.5rem 0;
+}
+
+.others__news--card:hover {
+    transform: scale(1.03);
+}
+
+.others__news--card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.others__news--text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--Blue);
+    gap: 0.8rem;
+}
+
+.others__news--text :nth-child(1) {
+    color: var(--Blue);
+    font-weight: 500;
+    background-color: var(--LigthBlue);
+    max-width: 150px;
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.others__news--text h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.others__news--text :nth-child(3) {
+    color: var(--Black);
+}
+
+.others__news--text span {
+    color: var(--BlackLight);
+}
+
+/* ------------------------------------FOOTER------------------------------------ */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    background-color: var(--Blue);
+    color: var(--White);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer h4{
+    text-align: center;
+}
+
+
+/* ----------------------------------RESPONSIVE------------------------------------ */
+
+@media (max-width: 1024px) {
+    .main__news--container {
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    .main__news--img{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .main__news--img img{
+        min-width: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    .main__news--container{
+        width: 95%;
+    }
+
+    .others__news--card{
+        max-width: 300px;
+        min-height: 350px;
+    }
+    .others__news--card img{
+        display: none;
+    }
+}
